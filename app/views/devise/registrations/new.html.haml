@@ -1,0 +1,36 @@
+= render "layouts/header"
+
+.body-user
+  .container
+    %header
+      .row
+        %h2 ユーザー登録
+  %hr/
+  .container
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      .field
+        .field-label
+          %span.label.label-danger 必須
+          = f.label :name,"ニックネーム"
+        .field-input
+          = f.text_field :name, autofocus: true, placeholder: "例) ジョン・ドウ", required: true, class: "input_default"
+      .field
+        .field-label
+          %span.label.label-danger 必須
+          = f.label :email,"メールアドレス"
+        .field-input
+          = f.email_field :email, placeholder: "例) a@example.com", required: true, class: "input_default"
+      .field
+        .field-label
+          %span.label.label-danger 必須
+          = f.label :password,"パスワード"
+        .field-input
+          = f.password_field :password, autocomplete: "off", placeholder: "英数字6文字以上", required: true, class: "input_default"
+      .field
+        .field-label
+          %span.label.label-danger 必須
+          = f.label :password_confirmation,"確認用パスワード"
+        .field-input
+          = f.password_field :password_confirmation, autocomplete: "off", placeholder: "もう一度入力してください", required: true, class: "input_default"
+      .actions
+        = f.submit "登録する", class: "btn-square-shadow"

@@ -1,0 +1,83 @@
+.body-user{
+  padding: 10px 4%;
+}
+header{
+  margin-top: 30px;
+  color: #005792;
+}
+hr{
+  border-width: 1px;
+  border-color: #13334c;
+}
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+
+.label-danger {
+  background: #ea352d;
+  margin: 0 0 0 4px;
+  padding: 1px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+}
+.input_default{
+//  height: 48px;
+  width: 30%;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background: #fff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.btn-square-shadow {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #fd5f00;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #bba981;
+  border-radius: 3px;
+}
+.btn-square-shadow:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+
+//.align-light{
+//  text-align: right;
+//}
+.noaccount{
+  margin-bottom: 35px;
+}
+.field{
+  margin-bottom: 35px;
+  .field-label{
+    color: #005792;
+    font-weight: bold;
+  }
+}
+.actions{
+  text-align: center;
+  padding: 10px 4%;
+}
+
+input:required{
+  background: #ffcdd2;
+}
+input[type="email"]:invalid{
+  background: #ffcdd2;
+}
+input:focus{
+  background: #EFEFEF;
+}
+
