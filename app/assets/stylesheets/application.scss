@@ -1,2 +1,8 @@
+@import "layouts/reset";
+@import "base/base";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "layouts/header";
+@import "registrations/new";
+@import "sessions/new";
+@import "posts/index";
