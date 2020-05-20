@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_19_085801) do
+ActiveRecord::Schema.define(version: 2020_05_20_154838) do
 
   create_table "images", force: :cascade do |t|
     t.string "image", null: false
@@ -22,25 +22,22 @@ ActiveRecord::Schema.define(version: 2020_05_19_085801) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", null: false
-    t.text "explanarion", null: false
+    t.text "explanation", null: false
     t.integer "user_id", null: false
-    t.datetime "created_at"
+    t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.datetime "#<ActiveRecord::ConnectionAdapters::SQLite3::TableDefinition:0x00007fe1b7dc5f78>"
-    t.index ["explanarion"], name: "index_posts_on_explanarion"
+    t.index ["explanation"], name: "index_posts_on_explanation"
     t.index ["title"], name: "index_posts_on_title"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "spots", force: :cascade do |t|
-    t.string "image", null: false
     t.string "address", null: false
-    t.float "latitude", null: false
-    t.float "longitude", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.integer "post_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["address"], name: "index_spots_on_address"
     t.index ["post_id"], name: "index_spots_on_post_id"
   end
 
