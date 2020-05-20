@@ -22,6 +22,8 @@ test:
 
 production:
   <<: *default
+  database: kokoiru_production
+  username: kokoiru
   adapter: postgresql
   url: <%= ENV['DATABASE_URL'] %>
   encoding: unicode
