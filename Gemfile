@@ -80,6 +80,7 @@ gem 'font-awesome-rails'
 gem 'payjp'
 gem 'ancestry'
 
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'rails-i18n'
 
@@ -87,4 +88,7 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 
-gem 'geocoder'
+gem "gmaps4rails"
+gem "geocoder"
+gem "gon"
+gem "dotenv-rails"
