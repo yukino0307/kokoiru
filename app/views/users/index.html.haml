@@ -1,0 +1,16 @@
+= render "layouts/header"
+
+.container
+  .user_info
+    .user_info__title
+      = "#{current_user.name}さん 投稿ありがとう！"
+
+  - if @post.present?
+    = render partial: 'post', collection: @post, as: :post
+  - else 
+    .listing-non
+      まだ投稿はありません。
+  .log-out
+    = link_to "ログアウト", destroy_user_session_path, method: :delete
+    
+= render "layouts/footer"

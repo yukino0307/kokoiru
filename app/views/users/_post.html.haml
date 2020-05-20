@@ -1,0 +1,6 @@
+.my-content
+  = link_to post_path(post), class: "my-content__list" do
+    .my-content__list__img
+      = image_tag post.images[0].image.url, alt: 'posts-photo'
+    .my-content__list__text
+      = "「#{post.title}」"
