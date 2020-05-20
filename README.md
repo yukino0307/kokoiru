@@ -1,35 +1,9 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 # **kokoiru**
 Google APIを利用した位置情報投稿サイトです。
 身近で見つけた生き物を撮影して位置情報と写真をアップすることで、田舎の生き物を探しやすくしています。
 
 # URL
-
+https://kokoiru.herokuapp.com/
 
 # 機能
 - 画像・住所の投稿機能
@@ -52,7 +26,6 @@ Google APIを利用した位置情報投稿サイトです。
 - ペットの迷子情報をアップする掲示板にも応用するため、掲示板機能とコメント機能を実装したい
 - 投稿意欲をアップさせるために、いいね👍機能の実装
 - 投稿数といいね数によってユーザーをランキング化
-
 
 
 # 開発環境
