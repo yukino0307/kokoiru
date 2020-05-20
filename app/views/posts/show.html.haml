@@ -1,0 +1,36 @@
+= render "layouts/header"
+
+.container
+  .show
+    .swiper-container
+      .swiper-wrapper
+        - @post.images.each_with_index do |image, i|
+          .swiper-slide
+            = image_tag image.image.url, alt: "Swiper#{i}"
+      .swiper-pagination
+      .swiper-button-prev
+      .swiper-button-next
+    .content
+      .content__title
+        = @post.title
+      .content__spot
+        = "スポット: #{@post.spot.address}"
+      .content__user
+        = "ニックネーム: #{@user.name}"
+      .content__text
+        %div
+          = @post.explanation
+    .spot
+      .spot__address
+        = "スポット: #{@post.spot.address}"
+        %input{onclick: "window.location.reload();", type: "button", value: "更新する"}
+      .spot__maps{id: "show_map", style: "height: 320px; width: 80%;"}
+  - if @user == current_user
+    .show-btn
+      .show-btn__delete
+        = link_to "削除", post_path, method: :delete
+  - else
+    .show-btn
+      %input{onclick: "history.back();", type: "button", value: "もどる"}
+    
+= render "layouts/footer"

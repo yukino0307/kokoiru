@@ -1,0 +1,128 @@
+.show{
+  display: flex;
+  flex-wrap: wrap;
+  .swiper-container {
+    position: relative;
+    width: 400px;
+    min-width: 40%;
+    &:before {
+      display: block;
+    }
+  }
+  .swiper-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .content{
+    margin: 8px auto 0;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    &__title{
+      max-width: 100%;
+      min-width: 280px;
+      font-size: 32px;
+    }
+    &__spot{
+      margin-top: 8px;
+      min-width: 100%;
+      font-size: 16px;
+    }
+    &__user{
+      margin-top: 8px;
+      min-width: 100%;
+      font-size: 16px;
+    }
+    
+    &__text{
+      margin-top: 8px;
+      padding: 8px 16px;
+      box-sizing: border-box;
+      min-height: 160px;
+      width: 100%;
+      min-width: 280px;
+      border: solid lightgray 1px;
+      line-height: normal;
+      table-layout:fixed;
+      div{
+        width: 100%;
+        word-wrap:break-word;
+      }
+    }
+  }
+  .spot{
+    margin: 16px auto;
+    width: 1000px;
+    max-width: 100%;
+    &__address{
+      margin: 0 80px;
+      font-size: 24px;
+    }
+    &__maps{
+      margin: 8px auto 0;
+    }
+  }
+}
+.show-btn{
+  display: block;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+  margin: 32px auto 0;
+  width: 100%;
+  text-align: center;
+  &__edit{
+    background-color: blue;
+    border-bottom: solid 4px #627295;
+    border-radius: 4px;
+    a{
+      display: block;
+      color: white;
+      text-decoration: none;
+    }
+    &:hover{
+      background-color: lightskyblue;
+    }
+  }
+  &__delete{
+    text-align: center;
+    max-width: 700px;
+    margin-top: 16px;
+    border: solid #fd5f00 1px;
+    border-radius: 4px;
+    margin: 0 auto;
+    a{
+      display: block;
+      color: #fd5f00;
+      text-decoration: none;
+      font-size: 18px;
+    }
+    &:hover{
+      background-color: #fd5f00;
+      a{
+        color: #fff;
+        font-size: 18px;
+      }
+    }
+  }
+  input{
+    display: block;
+    line-height: 48px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 32px auto 0;
+    width: 100%;
+    color: black;
+    background-color: lightgray;
+    &:hover{
+      background-color: gray;
+    }
+  }
+}

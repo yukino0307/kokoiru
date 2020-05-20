@@ -1,16 +1,21 @@
 = render "layouts/header"
 
 .container
-  .edit
-    %h2.title レビュー情報を編集
+  .new
+    %h2.title レビュー情報を入力
+    - if flash[:error].present?
+      .errors
+        -flash[:error].each do |e|
+          %li
+            = e
     .form
-      = form_with(model: @post, local: true, multipart: true) do |f|
+      = form_with model: @post, local: true, multipart: true do |f|
         .image
           %h3.image__title
             投稿画像
           %p.image__attention 最大3枚まで選択できます
           %ul.image__upload
-            = f.fields_for :images, builder: WithErrorFormBuilder do |fi|
+            = f.fields_for :images do |fi|
               %li.upload-form
                 = fi.label :image, class: 'upload-form__select-btn', for: "image" do
                   = fi.file_field :image, class: 'upload-form__select-btn--input_tag', id:"image"
@@ -27,8 +32,8 @@
           = f.text_field :title, class: 'post__title__text', placeholder: "タイトル名（必須20文字まで）"
           .post__content
             = f.label :discription, "レビュー内容", class: 'post__content__label'
-          = f.text_area :description, class: 'post__content__text', placeholder: "レビューの内容を入力してください。"
+          = f.text_area :explanation, class: 'post__content__text', placeholder: "レビューの内容を入力してください。"
         = f.submit "投稿する", class: 'post-btn'
-      = link_to("もどる", post_path(@post), class: 'back-btn')
-
+      = link_to("もどる", root_path, class: 'back-btn')
+    
 = render "layouts/footer"

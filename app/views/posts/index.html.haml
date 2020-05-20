@@ -1,0 +1,17 @@
+= render "layouts/header"
+
+.body-post
+  .container
+    %header
+      .row
+        %h2 みんなの投稿
+  %hr/
+  .main 
+    .post 
+      .post__list
+        - if @post.present?
+          = render partial: "list", collection: @post, as: :post
+
+= render "layouts/footer"
+
+
