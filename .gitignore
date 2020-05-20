@@ -34,4 +34,4 @@
 public/uploads/*
 
 # Google Map APIの保管場所
-/.env
+/vender/.env
