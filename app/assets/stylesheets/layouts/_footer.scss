@@ -1,0 +1,17 @@
+.footer-container{
+  height: 60px;
+  width: 100%;
+  .footer{
+    padding: 10px 4%;
+    hr{
+      border-width: 1px;
+      border-color: #13334c;
+    }
+    h2{
+      margin: 16px;
+      text-align: center;
+      font-size: 18px;
+      color: #005792;
+    }
+  }
+}

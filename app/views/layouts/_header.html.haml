@@ -1,14 +1,19 @@
 %body
   %header
     %h1.top-logo
-      = link_to "kokoiru", root_path
+      = link_to root_path do
+        = image_tag "kokoiru_logo.png", class: "logo"
     %nav.search-container
       %ul.top-nav
-        %li.favorite
-          = link_to "お気に入り", "#"
-        %li.registration
-          = link_to "新規登録", "#"
-        %li.login-menu
-          = link_to "ログイン", "#"
-        %li.listing
-          = link_to "投稿する", root_path
+        - if user_signed_in?
+          %li.favorite
+            = link_to "お気に入り", "#"
+          %li.mypage
+            = link_to "マイページ", users_path
+          %li.listing
+            = link_to "投稿する", new_post_path
+        - else
+          %li.registration
+            = link_to "新規登録", new_user_registration_path  
+          %li.login-menu
+            = link_to "ログイン", new_user_session_path
