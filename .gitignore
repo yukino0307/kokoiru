@@ -32,3 +32,6 @@
 
 # 開発環境で投稿された画像の保管場所
 public/uploads/*
+
+# Google Map APIの保管場所
+/.env
