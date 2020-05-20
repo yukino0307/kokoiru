@@ -1,8 +1,6 @@
 class Post < ApplicationRecord
   validates :title, length: { maximum: 20, allow_blank: true}, presence: true
   validates :explanation, length: { maximum: 500, allow_blank: true}, presence: true
-  validates :rating, presence: true
-  validates :status, presence: true
 
   belongs_to :user
   has_one :spot, dependent: :destroy
