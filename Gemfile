@@ -73,7 +73,7 @@ gem 'haml-rails'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'fog'
+gem 'fog-aws'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'font-awesome-sass'
