@@ -24,7 +24,7 @@ https://kokoiru.herokuapp.com/
 
 # DEMO
 新規登録 → 投稿 → 完了ページ(=マイページ) → 詳細ページ　の順で遷移しています。
-https://gyazo.com/1f8aeb5a6b23d405857400d295592c3c
+https://i.gyazo.com/1f8aeb5a6b23d405857400d295592c3c.gif
 
 # 工夫したポイント
 - 位置情報をマップに表示すること
